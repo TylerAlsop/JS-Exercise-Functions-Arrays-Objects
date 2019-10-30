@@ -38,11 +38,11 @@ function exampleFunction(num1, num2) {
  * }
 */
 function makePersonObject(idnum, namestring, emailstring) {
-  return ({
+  return {
     id: idnum,
     name: namestring,
     email: emailstring,
-  })
+  }
 }
 
 /**
@@ -58,8 +58,8 @@ function makePersonObject(idnum, namestring, emailstring) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(makePersonObject) {
+  return ("Hello, my name is " + makePersonObject.name);
 }
 
 /**

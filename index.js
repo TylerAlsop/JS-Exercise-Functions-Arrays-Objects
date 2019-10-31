@@ -137,7 +137,12 @@ function getLastCarInfo(inventoryArray) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventoryArray, carIdNum) {
-  /* code here */
+  for (let i=0; i < inventoryArray.length; i++) {
+    if (inventoryArray[i].id === carIdNum){
+      const car = inventoryArray[i];
+      return `This is a ${car.car_make} ${car.car_model}`;
+    }
+  }
 }
 
 /**

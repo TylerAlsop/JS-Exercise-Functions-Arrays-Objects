@@ -83,7 +83,7 @@ function makeSmartPerson(name) {
     },
     speak: function() {
       return "Hello, my name is " + smartObject.name;
-    }
+    },
   }
   return smartObject;
 }
@@ -100,8 +100,10 @@ function makeSmartPerson(name) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex() {
-  /* code here */
+function getCarInfoByIndex(inventoryArray, indexNum) {
+  const car = inventoryArray[indexNum];
+
+  return `This is a ${car.car_make} ${car.car_model}`;
 }
 
 /**
@@ -115,8 +117,11 @@ function getCarInfoByIndex() {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
 */
-function getLastCarInfo(/* code here */) {
-  /* code here */
+function getLastCarInfo(inventoryArray) {
+  const lastIndexNum = inventoryArray.length - 1;
+  const lastCarInfo = inventoryArray[lastIndexNum];
+
+  return `This is a ${lastCarInfo.car_make} ${lastCarInfo.car_model}`;
 }
 
 /**

@@ -155,10 +155,11 @@ function getCarInfoById(inventoryArray, carIdNum) {
 */
 function sortCarInventory(inventoryArray) {
   const sortedCars = inventoryArray.sort((a, b) => {
-    if (a < b) {
+    const modelA = a.car_model.toLowerCase(), modelB = b.car_model.toLowerCase()
+    if (modelA < modelB) {
       return -1;
     }
-    if (b > a) {
+    if (modelB > modelA) {
       return 1;
     }
     return 0;

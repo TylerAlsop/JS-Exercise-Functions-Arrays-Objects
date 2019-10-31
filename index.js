@@ -78,8 +78,12 @@ function getName(makePersonObject) {
 function makeSmartPerson(name) {
   const smartObject = {
     name: name,
-    sum: num1 + num2,
-    speak: "Hello, my name is " + name,
+    sum: function(num1, num2) {
+      return num1 + num2
+    },
+    speak: function() {
+      return "Hello, my name is " + smartObject.name;
+    }
   }
   return smartObject;
 }
@@ -96,7 +100,7 @@ function makeSmartPerson(name) {
  * For example, if getCarInfoByIndex is invoked with the inventory and the number 0,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoByIndex(/* code here */) {
+function getCarInfoByIndex() {
   /* code here */
 }
 
